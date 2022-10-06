@@ -11,8 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cafeteria',
       theme: ThemeData(
-          primaryColor: AppColors.primary, accentColor: AppColors.secondary),
-      home: LoginPage(),
+          primaryColor: AppColors.primary, 
+          accentColor: AppColors.secondary,
+          ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+      }
     );
   }
 }
